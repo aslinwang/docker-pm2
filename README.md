@@ -4,3 +4,5 @@
 * python3
 * py3-pip
 * xcoscmd
+* mongodb
+* redis-cli
