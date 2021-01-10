@@ -1,6 +1,6 @@
 FROM keymetrics/pm2:10-alpine
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
-RUN apk --update --no-cache add bash tzdata vim curl python3 py3-pip musl-dev git make gcc libc-dev g++ \
+RUN apk --update --no-cache add bash tzdata vim curl python3 redis py3-pip musl-dev git make gcc libc-dev g++ \
   && cp -r -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 RUN npm config set registry http://mirrors.tencent.com/npm/
