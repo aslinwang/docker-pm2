@@ -7,3 +7,7 @@ RUN pm2 install pm2-logrotate-inc
 RUN pm2 set pm2-logrotate-inc:dateFormat YYYYMMDD
 RUN npm install fbi @vue/cli lerna -g
 
+RUN echo 'http://dl-cdn.alpinelinux.org/alpine/v3.6/main' >> /etc/apk/repositories
+RUN echo 'http://dl-cdn.alpinelinux.org/alpine/v3.6/community' >> /etc/apk/repositories
+RUN apk update
+RUN apk add mongodb=3.4.4-r0
