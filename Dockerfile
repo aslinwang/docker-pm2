@@ -7,6 +7,7 @@ RUN npm config set registry http://mirrors.tencent.com/npm/
 RUN echo 'always-auth=true' >> ~/.npmrc
 RUN pm2 install pm2-logrotate-inc
 RUN pm2 set pm2-logrotate-inc:dateFormat YYYYMMDD
+RUN pm2 set pm2-logrotate-inc:retain 30
 RUN npm install @vue/cli -g
 
 RUN pip3 install xcoscmd
