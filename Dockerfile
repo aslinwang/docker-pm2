@@ -1,4 +1,4 @@
-FROM keymetrics/pm2:10-alpine
+FROM keymetrics/pm2:14-alpine
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 RUN apk --update --no-cache add bash tzdata vim curl python3 redis py3-pip musl-dev git make gcc libc-dev g++ \
   && cp -r -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
